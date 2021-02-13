@@ -10,12 +10,12 @@
 
 - **Is the slope of the linear model considered to be zero? Why or why not?**
     
-    Because the p_value is much lower than the accepted 0.5 threshold, we can rule out our null hypothesis and establish that the slope of the model is not 0.
+    Because the p_value is much lower than the accepted 0.05 threshold, we can rule out our null hypothesis and establish that the slope of the model is not 0.
 
 
 - **Does this linear model predict mpg of MechaCar prototypes effectively? Why or why not?**
 
-    This model does not effectively predict the mpg of the MechaCar prototype because the significance of the Intercept variable is so high. This suggests that there are other extraneous variables within or beyond our dataset that are affecting the output.
+    This model does not effectively predict the mpg of the MechaCar prototype because the significance of the Intercept variable is so high. This suggests that there are other extraneous variables within or beyond our dataset that are affecting our analysis.
 
 ## Summary Statistics on Suspension Coils ##
 
@@ -49,13 +49,35 @@ The result of Manufacturing Lot 3's t-test has a much lower p_value than the oth
 
 ## Study Design: MechaCar vs Competition
 
-**What metric or metrics are you going to test?**
+### <center> MechaCar vs. The Competition: </center>
+<center> <b>Which is more Cost Effective by Year</b> </center>
 
+Our analysis will evaluate the mean total yearly cost of the MechaCar as compared to the competition. Our study will collect monthly data over five years from a random sampling of users, controlling for climate and weather conditions to try to minimize the extraneous variables.
+
+**What metric or metrics are you going to test?**
+The metrics we will test are:
+- Initial Cost : Total Cost to purchase 
+- Maintenance Costs: repairs, preventative care etc.
+- Running Costs: Incorporate MPG multiplied by mean gas price for each month/year.
 
 **What is the null hypothesis or alternative hypothesis?**
+The null hypothesis is that there is no statistical difference in yearly cost over the five year span. 
 
+Hypothesis: The MechaCar has a higher or lower cost to consumer than the competition per year over the 5 year time period.
 
 **What statistical test would you use to test the hypothesis? And why?**
+Two-Sample T-test - comparing MechaCar to the Competitor
+Measures of central tendency (Mean, Median, SD and Variance) for each cost factor.
 
+Linear Regression- Running costs over the five years
 
 **What data is needed to run the statistical test?**
+
+The datasets needed for both the MechaCar and the Competition to conduct this analysis are:
+- Sale price for each vehicle, before taxes
+- Maintenance records and price/frequency of services
+- MPG and Average monthly fuel cost per gallon
+
+
+Assumptions
+The data is available for at least 5 years. The data is for the first 5 years of a new vechicle of either the competition or MechaCar and 
