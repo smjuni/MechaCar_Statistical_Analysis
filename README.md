@@ -26,4 +26,36 @@
 
 <img src="images/Manufacturing_Lots.png"></img>
 
-Overall the variance of the combined lots is 62.29356, which is less than 100 pound per square inch (PSI), which is our threshold for acceptable variance. When we take a look at the PSI per Manufacturing Lot, we discover that while the means and medians are the well within the standard deviation and are very similar across the board (within 5 PSI of each other), the variance for Lot 3 is much higher than both the other lots and is outside our threshold of 100 PSI. Lot 3's Variance is 170.2861224, and does not meet the design specifications variance of less than 100PSI that is required.
+Overall the variance of the combined lots is 62.29356, which is less than 100 pound per square inch (PSI), our threshold for acceptable variance. When we take a look at the PSI per Manufacturing Lot, we discover that while the means and medians are seemingly similar across the board (within 5 PSI of each other), the variance for Lot 3 is much higher than both the other lots and is outside our threshold of 100 PSI. Lot 3's Variance is 170.2861224, and does not meet the design specifications variance of less than 100PSI that is required.
+
+## T-Tests on Suspension Coils
+
+**Briefly summarize your interpretation and findings for the t-test results. Include screenshots of the t-test to support your summary.**
+
+The null hypothesis for this analysis is that the mean PSI of all manufacturing lots is not statistically different than the population mean of 1500. 
+
+<img src="images/ttest_total.png"></img>
+
+Using the t-test method on the PSI data of all manufacturing lots, we do not have enough data to reject our null hypothesis. The mean of the data set for all lots is equal to the population mean(within 95%). Our mean for the total sample is 1498.78, which is within our confidence interval.
+
+<img src="images/Del3_Lot1.png"></img>
+Based on the t-test data for lot 1, we are not able to reject the null hypothesis that this data set is not statistically different than the population. Both the population mean and sample mean are 1500.
+
+<img src="images/Del3_Lot2.png"></img>
+For the lot 2 sample, we are still unable to reject our null hypothesis. Our sample mean is within the the 95% confidence interval and has a p_value of 0.61, this and the sample mean of 1500.2, infers that we are not able to say with confidence that this samples mean is statistically different than the population mean of 1500.
+
+<img src="images/del3_lot3.png"></img>
+The result of Manufacturing Lot 3's t-test has a much lower p_value than the other two lots. The p_value of 0.04 is lower than our accepted significance of 0.05 and the sample mean is outside of the accepted confidence interval. This means that we are able to reject the null hypothesis and deduce that there is, in fact, a statistical difference between this Manufacturing lot and the population mean.
+
+## Study Design: MechaCar vs Competition
+
+**What metric or metrics are you going to test?**
+
+
+**What is the null hypothesis or alternative hypothesis?**
+
+
+**What statistical test would you use to test the hypothesis? And why?**
+
+
+**What data is needed to run the statistical test?**
