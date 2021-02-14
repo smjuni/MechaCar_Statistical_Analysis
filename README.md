@@ -6,7 +6,7 @@
 
 - **Which variables/coefficients provided a non-random amount of variance to the mpg values in the dataset?**
 
-    In our analysis, the variables that provided a non-random amount of variance to the MPG values were Intercept, Vehicle Length and Ground Clearance. All three variables/coefficients had an extremely high level of significance (0-0.001)
+    In our analysis, the variables that provided a significant amount of variance to the MPG values were Intercept, Vehicle Length and Ground Clearance. All three variables/coefficients had an extremely high level of significance (0-0.001)
 
 - **Is the slope of the linear model considered to be zero? Why or why not?**
     
@@ -15,7 +15,7 @@
 
 - **Does this linear model predict mpg of MechaCar prototypes effectively? Why or why not?**
 
-    This model does not effectively predict the mpg of the MechaCar prototype because the significance of the Intercept variable is so high. This suggests that there are other extraneous variables within or beyond our dataset that are affecting our analysis.
+    This model does not effectively predict the mpg of the MechaCar prototypes because the significance of the Intercept variable is so high. This suggests that there are other extraneous variables within or beyond our dataset that are affecting our analysis.
 
 ## Summary Statistics on Suspension Coils ##
 
@@ -52,32 +52,46 @@ The result of Manufacturing Lot 3's t-test has a much lower p_value than the oth
 ### <center> MechaCar vs. The Competition: </center>
 <center> <b>Which is more Cost Effective by Year</b> </center>
 
-Our analysis will evaluate the mean total yearly cost of the MechaCar as compared to the competition. Our study will collect monthly data over five years from a random sampling of users, controlling for climate and weather conditions to try to minimize the extraneous variables.
+Our analysis will evaluate the mean total yearly cost of the MechaCar as compared to a competitor. Our study will collect monthly data over five years from a random sampling of users, controlling for climate and weather conditions to try to minimize the extraneous variables.
 
 **What metric or metrics are you going to test?**
+
 The metrics we will test are:
 - Initial Cost : Total Cost to purchase 
-- Maintenance Costs: repairs, preventative care etc.
-- Running Costs: Incorporate MPG multiplied by mean gas price for each month/year.
+- Maintenance Costs: repairs, preventative services etc.
+- Running Costs:  MPG multiplied by mean gas price for each month.
+- Total Cost: The three above variables added together each month.
+
 
 **What is the null hypothesis or alternative hypothesis?**
-The null hypothesis is that there is no statistical difference in yearly cost over the five year span. 
+The null hypothesis is that there is no statistical difference in mean consumer cost between the two vehicles per year over the five year span. 
 
-Hypothesis: The MechaCar has a higher or lower cost to consumer than the competition per year over the 5 year time period.
+Hypothesis: The MechaCar has a higher or lower mean cost to consumer than the competition per year over the 5 year time period.
 
 **What statistical test would you use to test the hypothesis? And why?**
-Two-Sample T-test - comparing MechaCar to the Competitor
-Measures of central tendency (Mean, Median, SD and Variance) for each cost factor.
+Two-Sample T-test - comparing MechaCar to the Competitor.
 
-Linear Regression- Running costs over the five years
+The Two Sample T-test would be the best statistical test to investigate this analysis because we are comparing two samples (the Mechacar Data and the Competition Data) over time. The two-sample T-test will evaluate if there is a statistical difference between the means of the MechaCar and the Competition.
+
+The following T-Tests will be administered in order to give us the full picture:
+
+1. Initial Cost - MechaCar vs Competition
+2. Maintenance cost per month, over the 5 year time span - MechaCar vs Competition
+3. Running Costs - Running costs per month, over the 5 years for MechaCar vs Competition
+4. Total Costs - A comparison between the MechaCar and the chosen competition per month for the 5 year time period.
+
+In order to run the two-sample t-tests, we will need to ensure that the data follows the two-sample t-test assumptions by doing some exploratory measures of central tendency.
 
 **What data is needed to run the statistical test?**
 
-The datasets needed for both the MechaCar and the Competition to conduct this analysis are:
+A large sample size of MechaCar and Competitor history datasets are needed to conduct this analysis. Within these sets, the required data is:
 - Sale price for each vehicle, before taxes
 - Maintenance records and price/frequency of services
-- MPG and Average monthly fuel cost per gallon
+- MPG of each vehicle, tested monthly 
+- Average monthly fuel cost per gallon
+- A Total Costs variable is created, where the above costs are totalled and the mean is derived, by month, for 5 years.
 
 
 Assumptions
-The data is available for at least 5 years. The data is for the first 5 years of a new vechicle of either the competition or MechaCar and 
+
+The data is available for at least 5 years. The data is for the first 5 years of a new vehicle of either the competition or MechaCar. 
